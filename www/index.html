@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="default-src 'self' data: gap: * 'unsafe-eval'; style-src 'self' 'unsafe-inline' *; media-src *">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Vas vodic za kupovinu</title>
+
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+
+</head>
+<body>
+	<div id="main" class="container-fluid">
+        <div id="banner">
+            <div align="center"><canvas id="myCanvas"></canvas></div>
+        </div> 
+            <div class="row">        
+                    <div class="col-sm-3"><button id = "takePicture" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-camera"></span>    Take picture</button></div>
+                    <div class="col-sm-3"><button data-toggle="collapse" data-target="#coll1" class="btn btn-info btn-block"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Places</button>
+                        <div id="coll1"  class="collapse">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="radiusInput" placeholder="Enter search radius for nearby shops">
+                                    <div class="input-group-addon">meters</div>
+                                </div>
+                            </div>
+                        <button id="getLocations" type="button" class="btn btn-info btn-block">Get stores</button>
+                        </div>
+					</div>
+                        <div class="col-sm-3"><button data-toggle="collapse" data-target="#coll2" class="btn btn-warning btn-block"><span class="glyphicon glyphicon-map-marker"></span>    Set discount details</button>
+                            <div id="coll2"  class="collapse">
+                            <input type="text" class="form-control" id="ime_radnje" placeholder="Enter shop name">
+                            <input type="date" class="form-control" id="datum">
+                            </div>
+                     </div> 
+                     <div class="col-sm-3"><button data-toggle="collapse" data-target="#coll3" class="btn btn-success btn-block"><span class="glyphicon glyphicon-cog"></span>    IP address settings</button>
+                            <div id="coll3"  class="collapse">
+                                <input type="tel" class="form-control" id="ip_address" placeholder="Enter ip address">
+                                <button type="button" id="ip_submit" class="btn btn-success  btn-block">Save IP address</button>
+                            </div>
+                     </div>       	
+                </div>
+          
+        <!--<footer id="footer"></footer>-->
+        <div id="main-content">    
+            <div id="map"></div>    
+    	</div>
+    <footer id="footer"></footer>
+	</div>
+	
+    <script src="scripts/jquery.min.js"></script>
+  	<script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery-2.2.3.js"></script>
+    <script src="scripts/socket.io.js"></script>
+    <script src="scripts/index.js"></script>
+    <!--TODO: Add your Google Maps JavaScript API key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE&libraries=places"></script>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/location.js"></script>
+    <script src="scripts/camera.js"></script>
+    <script src="scripts/canvas.js"></script>
+    <script src="scripts/salemarker.js"></script>
+    <script src="scripts/ipaddress.js"></script>
+</body>
+</html>

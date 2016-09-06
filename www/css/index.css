@@ -1,0 +1,28 @@
+﻿body {
+    font: 1em Sans-Serif;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+	background-color:#999;
+}
+
+#footer{   
+    /*background-color: #5bc0de;*/
+    width: 100%;
+    overflow:hidden;    
+    height: 12px;
+}
+
+#main
+{
+		background-image:url(../images/pozadina.png);
+		background-position: center;	
+}
+
+#coll1
+{
+	background-color:#CCC;
+}
+
